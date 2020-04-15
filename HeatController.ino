@@ -30,7 +30,6 @@ float CalcTargetTemp()
 void actionRelays(uint8_t d)
 {
   digitalWrite(relayPin,d);
-  relayStatus = ~d;
 }
 
 
@@ -49,11 +48,13 @@ void HeatController(float currentTemp)
     actionRelays(relayOFF);
     Serial.println("Relays OFF");
     WriteDisplay(0,20,"Relay OFF",true, true);
+    relayStatus=0;
   }
   else
   {
     actionRelays(relayON);
     Serial.println("Relays ON");
     WriteDisplay(0,20,"Relay ON",true, true);
+    relayStatus=1;
   }
 }
