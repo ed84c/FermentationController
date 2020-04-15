@@ -30,7 +30,7 @@ float CalcTargetTemp()
 void actionRelays(uint8_t d)
 {
   digitalWrite(relayPin,d);
-  relayStatus = d;
+  relayStatus = ~d;
 }
 
 

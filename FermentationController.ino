@@ -34,7 +34,7 @@ U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ 16, /* clock=*/
 
 //MQQT
 #include "WifiSettings.h" //Contains the SSID and Password
-#define mqttServer "192.168.10.116" //Raspberry PI IP
+#define mqttServer "192.168.10.167" //Raspberry PI IP
 #define mqttTopic "homebrew"
 WiFiClient espClient;
 PubSubClient client(espClient);
